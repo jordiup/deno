@@ -1,5 +1,4 @@
-import * as log from "https://deno.land/std/log/mod.ts";
-import { Application, send } from "https://deno.land/x/oak@v6.0.1/mod.ts";
+import { Application, send, log } from "./deps.ts";
 import api from "./api.ts";
 
 const app = new Application();
@@ -47,6 +46,7 @@ app.use(async (ctx, next) => {
     "/javascripts/script.js",
     "/stylesheets/style.css",
     "/images/favicon.png",
+    "/videos/earth.mp4",
   ];
   if (fileWhiteList.includes(filePath)) {
     await send(ctx, filePath, {

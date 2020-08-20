@@ -1,7 +1,7 @@
 import {
   assertEquals,
   assertNotEquals,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "../deps_testing.ts";
 import { Planet, GenericPlanet } from "../interfaces.ts";
 import { filterHabitablePlanets } from "./planets.ts";
 
